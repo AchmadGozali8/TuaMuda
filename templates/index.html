@@ -1,10 +1,96 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Indexx</title>
-	</head>
-	<body>
-		Masukkan Nama Anda: <input type="text" name="nama"><br>
-		<input type="submit" value="submit">
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../static/dist/css/framework7.material.min.css">
+    <!-- It should be included After main Framework7 styles -->
+    <link rel="stylesheet" href="../static/dist/css/framework7.material.colors.min.css"
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="../static/dist/css/framework7.ios.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../static/css/my-app.css">
+  </head>
+  <body class="theme-blue">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <!-- Navbar inner for Index page-->
+          <div data-page="index" class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">Awesome App</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+          <!-- Navbar inner for About page-->
+          <div data-page="about" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">About Us</div>
+          </div>
+          <!-- Navbar inner for Services page-->
+          <div data-page="services" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Services</div>
+          </div>
+          <!-- Navbar inner for Form page-->
+          <div data-page="form" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Form</div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block-title">Welcome To My Awesome App</div>
+             
+                <img src="http://vignette4.wikia.nocookie.net/naruto/images/0/09/Naruto_newshot.png/revision/latest/scale-to-width-down/300?cb=20150817151803" style="border-radius:80%;float:center;">
+             
+              <div class="row">
+                  <div class="col-50">
+                    <a href="#" class="button button-big button-fill color-green">Tua</a>
+                  </div>
+                  <div class="col-50">
+                    <a href="#" class="button button-big button-fill color-red">Muda</a>
+                  </div>
+                </div>  
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link"></a><a href="#" class="link"></a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../static/dist/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../static/js/my-app.js"></script>
+  </body>
 </html>

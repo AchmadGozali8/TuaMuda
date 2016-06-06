@@ -29,7 +29,7 @@ def user():
 		if nama == "":
 			error()
 		else:
-			data['user']['namaUser'][]=nama
+			data['user']['namaUser']=nama
 
 @app.route('/pilihan')
 def main():	
@@ -52,4 +52,4 @@ def result():
 		print "Umur asli object ",data['object']['umurObject']
 
 if __name__ == "__main__":  
-`    app.run(host='0.0.0.0', port=9001, debug=True)
+    app.run(host='0.0.0.0', port=9001, debug=True)
