@@ -1,4 +1,4 @@
-from flask import Flask, request,render_template
+from flask import Flask, redirect,request,render_template
 app = Flask(__name__)
 
 data = {
@@ -16,25 +16,28 @@ data = {
 	}
 }
 
-@app.route('/')
+@app.route('/choose')
 def index():
 	return render_template('index.html')
 
 
 @app.route('/login',methods=["GET","POST"])
 def user():
+	return render_template('login.html')
 
-	nama = request.form('nama')
+	nama = request.form['nama']
 	if request.method=='POST':
 		if nama == "":
 			error()
 		else:
 			data['user']['namaUser']=nama
+			return redirect(url_for('choose'))
 
 @app.route('/pilihan')
 def main():	
-	tua = request.form('tua')
-	muda = request.form('muda')
+	tua = request.form.get('tua',None)
+	muda = request.form.get('muda',None)
+	
 	if tua == 'tua':
 		data['user']['pilihanUser']['tua']= 'tua'
 	else:
